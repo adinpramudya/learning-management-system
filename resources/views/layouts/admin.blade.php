@@ -21,6 +21,10 @@
 
     <!-- Favicon -->
     <link href="{{ asset('img/favicon.png') }}" rel="icon" type="image/png">
+
+     <!-- DataTables CSS -->
+     <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap4.min.css" rel="stylesheet">
+
 </head>
 <body id="page-top">
 
@@ -46,6 +50,44 @@
                 <i class="fas fa-fw fa-tachometer-alt"></i>
                 <span>{{ __('Dashboard') }}</span></a>
         </li>
+
+          <!-- Divider -->
+          <hr class="sidebar-divider">
+
+          <!-- Heading -->
+          <div class="sidebar-heading">
+              {{ __('Management Users') }}
+          </div>
+  
+          <!-- Nav Item - Teacher -->
+          <li class="nav-item {{ Nav::isRoute('teacher') }}">
+              <a class="nav-link" href="{{ route('teacher') }}">
+                  <i class="fas fa-fw fa-user"></i>
+                  <span>{{ __('Teacher') }}</span>
+              </a>
+          </li>
+  
+          {{-- <!-- Nav Item - Staff -->
+          <li class="nav-item {{ Nav::isRoute('staff') }}">
+              <a class="nav-link" href="{{ route('staff') }}">
+                  <i class="fas fa-fw fa-hands-helping"></i>
+                  <span>{{ __('Staff') }}</span>
+              </a>
+          </li>
+
+           <!-- Nav Item - Parent-->
+           <li class="nav-item {{ Nav::isRoute('parent') }}">
+            <a class="nav-link" href="{{ route('parent') }}">
+                <i class="fas fa-fw fa-hands-helping"></i>
+                <span>{{ __('Parent') }}</span>
+            </a>
+              <!-- Nav Item - Student-->
+           <li class="nav-item {{ Nav::isRoute('student') }}">
+            <a class="nav-link" href="{{ route('student') }}">
+                <i class="fas fa-fw fa-hands-helping"></i>
+                <span>{{ __('Student') }}</span>
+            </a>
+        </li> --}}
 
         <!-- Divider -->
         <hr class="sidebar-divider">
@@ -329,5 +371,9 @@
 <script src="{{ asset('vendor/bootstrap/js/bootstrap.min.js') }}"></script>
 <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+<!-- DataTables JS -->
+<script src="https://cdn.datatables.net/1.13.6/js/datatables.min.js"></script>
+<script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap4.min.js"></script>
+
 </body>
 </html>

@@ -28,3 +28,7 @@ Route::put('/profile', 'ProfileController@update')->name('profile.update');
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('/teacher', function() {
+    return view('teacher.index');
+})->name('teacher');
